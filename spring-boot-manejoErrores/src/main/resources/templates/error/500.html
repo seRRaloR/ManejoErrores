@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Oops! Se ha producido un ERROR!</title>
+</head>
+<body>
+<h1>Oops! Se ha producido un ERROR!</h1>
+<div th:text="${error}"></div>
+<div th:text="${message}"></div>
+<div th:text="'Error: ' + ${status}"></div>
+<div th:text="${timestamp}"></div>
+<div th:text="${trace}"></div>
+
+</body>
+</html>
