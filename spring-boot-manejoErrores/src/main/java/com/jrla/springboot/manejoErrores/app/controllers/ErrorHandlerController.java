@@ -8,6 +8,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
+import com.jrla.springboot.manejoErrores.app.errors.UsuarioNoEncontradoException;
+
 // La siguiente anotación es importante
 @ControllerAdvice
 public class ErrorHandlerController {
@@ -29,6 +31,17 @@ public class ErrorHandlerController {
 	@ExceptionHandler(NumberFormatException.class)
 	public String errorFormatoNumerico(NumberFormatException ex, Model modelo) {
 		modelo.addAttribute("error", "Error de formato numérico");
+		modelo.addAttribute("mensaje", ex.getMessage());
+		modelo.addAttribute("codigo", HttpStatus.INTERNAL_SERVER_ERROR.value());
+		modelo.addAttribute("timestamp", new Date());
+		
+	
+		return("error/generica");
+	}
+	
+	@ExceptionHandler(UsuarioNoEncontradoException.class)
+	public String usuarioNoEncontrado(UsuarioNoEncontradoException ex, Model modelo) {
+		modelo.addAttribute("error", "ERROR: usuario no encontrado!!!!");
 		modelo.addAttribute("mensaje", ex.getMessage());
 		modelo.addAttribute("codigo", HttpStatus.INTERNAL_SERVER_ERROR.value());
 		modelo.addAttribute("timestamp", new Date());
