@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Error aritmético</title>
+</head>
+<body>
+<h1>Oops! Se ha producido un error de aritmética!</h1>
+<div th:text="'Tipo: ' + ${error}"></div>
+<div th:text="'Descripción: ' + ${mensaje}"></div>
+<div th:text="'Código: ' + ${codigo}"></div>
+<div th:text="'Fecha y hora:' + ${timestamp}"></div>
+</body>
+</html>

@@ -7,10 +7,13 @@
 <body>
 <h1>Oops! La página no existe</h1>
 <div th:text="'Tipo: ' + ${error}"></div>
+<!-- El mensaje tampoco existe en el 404
 <div th:text="'Descripción: ' + ${message}"></div>
+ -->
 <div th:text="'Código: ' + ${status}"></div>
-<div th:text="'Fehca y hora:' + ${timestamp}"></div>
+<div th:text="'Fecha y hora:' + ${timestamp}"></div>
 <hr>
+<div th:text="'Ruta:' + ${path}"></div>
 <!-- la traza no existe en el error 404
 <div th:text="${trace}"></div>
  -->
