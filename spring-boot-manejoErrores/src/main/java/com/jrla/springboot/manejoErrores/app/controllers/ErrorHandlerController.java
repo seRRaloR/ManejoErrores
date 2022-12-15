@@ -23,7 +23,7 @@ public class ErrorHandlerController {
 		modelo.addAttribute("codigo", HttpStatus.INTERNAL_SERVER_ERROR.value());
 		modelo.addAttribute("timestamp", new Date());
 		
-		return "error/aritmetica";
+		return "error/generica";
 	}
 	
 	@ExceptionHandler(NumberFormatException.class)
@@ -34,6 +34,6 @@ public class ErrorHandlerController {
 		modelo.addAttribute("timestamp", new Date());
 		
 	
-		return("error/formato-numerico");
+		return("error/generica");
 	}
 }

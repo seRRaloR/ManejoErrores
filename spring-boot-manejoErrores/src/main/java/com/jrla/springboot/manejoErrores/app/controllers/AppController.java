@@ -12,7 +12,8 @@ public class AppController {
 	@GetMapping("/index")
 	public String index(Model modelo) {
 		
-		Integer valor = Integer.parseInt("ValorNoNumérico");
+		//Integer valor = Integer.parseInt("ValorNoNumérico");
+		Integer valor = 100 / 0;
 		return "index";
 	}
 
