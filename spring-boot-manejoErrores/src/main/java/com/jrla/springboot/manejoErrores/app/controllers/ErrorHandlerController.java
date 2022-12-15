@@ -25,4 +25,15 @@ public class ErrorHandlerController {
 		
 		return "error/aritmetica";
 	}
+	
+	@ExceptionHandler(NumberFormatException.class)
+	public String errorFormatoNumerico(NumberFormatException ex, Model modelo) {
+		modelo.addAttribute("error", "Error de formato numérico");
+		modelo.addAttribute("mensaje", ex.getMessage());
+		modelo.addAttribute("codigo", HttpStatus.INTERNAL_SERVER_ERROR.value());
+		modelo.addAttribute("timestamp", new Date());
+		
+	
+		return("error/formato-numerico");
+	}
 }
