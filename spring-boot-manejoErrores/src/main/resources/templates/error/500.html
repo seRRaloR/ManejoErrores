@@ -6,11 +6,11 @@
 </head>
 <body>
 <h1>Oops! Se ha producido un ERROR!</h1>
-<div th:text="${error}"></div>
-<div th:text="${message}"></div>
-<div th:text="'Error: ' + ${status}"></div>
-<div th:text="${timestamp}"></div>
+<div th:text="'Tipo: ' + ${error}"></div>
+<div th:text="'Descripción: ' + ${message}"></div>
+<div th:text="'Código: ' + ${status}"></div>
+<div th:text="'Fehca y hora:' + ${timestamp}"></div>
+<hr>
 <div th:text="${trace}"></div>
-
 </body>
 </html>
