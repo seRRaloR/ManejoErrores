@@ -47,6 +47,6 @@ public class ErrorHandlerController {
 		modelo.addAttribute("timestamp", new Date());
 		
 	
-		return("error/generica");
+		return("error/usuario-no-existe");
 	}
 }
