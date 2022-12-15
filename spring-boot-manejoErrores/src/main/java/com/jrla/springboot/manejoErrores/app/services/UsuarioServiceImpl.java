@@ -2,6 +2,7 @@ package com.jrla.springboot.manejoErrores.app.services;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
@@ -40,6 +41,12 @@ public class UsuarioServiceImpl implements UsuarioService {
 			}
 		}
 		return resultado;
+	}
+
+	@Override
+	public Optional<Usuario> obtenerPorIdOptional(Integer id) {
+		Usuario resultado = this.obtenerPorId(id);
+		return Optional.ofNullable(resultado);
 	}
 
 }
