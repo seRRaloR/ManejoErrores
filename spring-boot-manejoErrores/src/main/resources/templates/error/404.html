@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>PÁGINA NO ENCONTRADA</title>
+</head>
+<body>
+<h1>Oops! La página no existe</h1>
+<div th:text="'Tipo: ' + ${error}"></div>
+<div th:text="'Descripción: ' + ${message}"></div>
+<div th:text="'Código: ' + ${status}"></div>
+<div th:text="'Fehca y hora:' + ${timestamp}"></div>
+<hr>
+<!-- la traza no existe en el error 404
+<div th:text="${trace}"></div>
+ -->
+</body>
+</html>
